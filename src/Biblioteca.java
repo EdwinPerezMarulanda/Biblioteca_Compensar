@@ -7,8 +7,9 @@ public class Biblioteca {
         int totalLibros = 0;
         int opcion;
 
+        // Ciclo para iniciar menú principal
         do {
-            System.out.println("\n--- Menú Biblioteca ---");
+            System.out.println("\n***** Biblioteca Compensar *****");
             System.out.println("1. Registrar libro");
             System.out.println("2. Actualizar libro");
             System.out.println("3. Eliminar libro");
@@ -16,7 +17,8 @@ public class Biblioteca {
             System.out.println("5. Ordenar libros");
             System.out.println("0. Salir");
             System.out.print("Opción: ");
-            opcion = sc.nextInt(); sc.nextLine();
+            opcion = sc.nextInt();
+            sc.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -36,7 +38,7 @@ public class Biblioteca {
                     ordenarLibros(biblioteca, totalLibros, sc);
                     break;
                 case 0:
-                    System.out.println("Saliendo...");
+                    System.out.println("Saliendo......");
                     break;
                 default:
                     System.out.println("Opción inválida");
@@ -44,6 +46,7 @@ public class Biblioteca {
         } while (opcion != 0);
     }
 
+    // Métodos
     public static void registrarLibro(String[][] biblio, int index, Scanner sc) {
         System.out.print("Código: ");
         biblio[index][0] = sc.nextLine();
@@ -122,7 +125,7 @@ public class Biblioteca {
         System.out.println("4. Páginas");
         int campo = sc.nextInt(); sc.nextLine();
 
-        System.out.println("Método: burbuja / seleccion");
+        System.out.println("Método: burbuja / selección");
         String metodo = sc.nextLine();
 
         if (metodo.equalsIgnoreCase("burbuja")) {
@@ -135,7 +138,7 @@ public class Biblioteca {
                     }
                 }
             }
-        } else if (metodo.equalsIgnoreCase("seleccion")) {
+        } else if (metodo.equalsIgnoreCase("selección")) {
             for (int i = 0; i < total - 1; i++) {
                 int minIdx = i;
                 for (int j = i + 1; j < total; j++) {
